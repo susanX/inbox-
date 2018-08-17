@@ -1,0 +1,145 @@
+
+/*Test.describe("Basictest",function(){Test.assertEquals(crossedwords('X','X'), 'X\n') 
+Test.assertEquals(crossedwords("",""),'Word length 1 – 20 letters')
+Test.assertEquals(crossedwords("a","a"),'Please enter captial letters')
+Test.assertEquals(crossedwords("X","A"),'There must be a matching letter in both words')
+Test.assertEquals(crossedwords("AABBCC","DDEEFF"),'There must be a matching letter in both words')
+Test.assertEquals(crossedwords("A","A"),'A\n'), 'Min length'
+Test.assertEquals(crossedwords("A","BBBBBBBBBBBBBBBBBBBA"),'B\nB\nB\nB\nB\nB\nB\nB\nB\nB\nB\nB\nB\nB\nB\nB\nB\nB\nB\nA\n'), 'Max length'
+Test.assertEquals(crossedwords("A","BBBBBBBBBBBBBBBBBBBAC"),"Word length 1 – 20 letters")
+Test.assertEquals(crossedwords("AAAAAAAAAAAAAAAAAAAA","BBBBBBBBBBBABBBBBBBB"),'B                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nAAAAAAAAAAAAAAAAAAAA\nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \n')
+Test.assertEquals(crossedwords("ZAAAAAAAAAAAAAAAAAAA","ZBBBBBBBBBBABBBBBBBB"),'ZAAAAAAAAAAAAAAAAAAA\nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nA                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \nB                   \n')
+})
+*/
+
+
+//randum
+function randRun(x){
+  switch (x){
+    case 1:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('X','X'), 'X\n') 
+    }); 
+    break;
+
+    case 2:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('AT','A'), 'AT\n') 
+    }); 
+    break;
+    
+    case 3:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('BAR','BAT'), 'BAR\nA  \nT  \n') 
+    });
+    break;
+      
+    case 4:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('BAN','ACE'), 'BAN\n C \n E \n') 
+    }); 
+    break;
+  
+    case 5:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('CODING','CONCATENATION'), 'CODING\nO     \nN     \nC     \nA     \nT     \nE     \nN     \nA     \nT     \nI     \nO     \nN     \n') 
+    }); 
+    break;
+
+    case 6:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('ZIGZAG','ZAP'), 'ZIGZAG\nA     \nP     \n') 
+    }); 
+    break;
+
+    case 7:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('ANAPHORIC','CODEWARS'), 'ANAPHORIC\n        O\n        D\n        E\n        W\n        A\n        R\n        S\n') 
+    }); 
+    break;
+
+    case 8:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('LOOP','STOP'), ' S  \n T  \nLOOP\n P  \n') 
+    }); 
+    break;
+
+    case 9:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('SUPER','PROTOCOL'), 'SUPER\n  R  \n  O  \n  T  \n  O  \n  C  \n  O  \n  L  \n') 
+    }); 
+    break;
+
+    case 10:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('CAVE','ENCODE'), 'CAVE\n   N\n   C\n   O\n   D\n   E\n') 
+    }); 
+    case 11:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('POP','ZERO'), ' Z \n E \n R \nPOP\n') 
+    }); 
+    
+    case 12:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('HERO','SCOPE'), '   S\n   C\nHERO\n   P\n   E\n') 
+    }); 
+    
+    case 13:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('SOCK','BOOK'), ' B  \nSOCK\n O  \n K  \n') 
+    }); 
+    break;
+
+    case 14:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('CODEWARS','HERS'), '   H    \nCODEWARS\n   R    \n   S    \n') 
+    }); 
+    break;
+
+    case 15:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('PHONE','END'), 'PHONE\n    N\n    D\n') 
+    }); 
+    break;
+
+    case 16:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('ARRAY','BRACKET'), ' B   \nARRAY\n A   \n C   \n K   \n E   \n T   \n') 
+    }); 
+    break;
+        
+    case 17:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('MICE','FIN'), ' F  \nMICE\n N  \n') 
+    }); 
+    break;
+
+    case 18:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('GOT','BAG'), 'B  \nA  \nGOT\n') 
+    }); 
+    break;
+
+    case 19:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('MAIL','LETTER'), 'MAIL\n   E\n   T\n   T\n   E\n   R\n') 
+    }); 
+    break;
+
+    case 20:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('ASK','FACE'), 'F  \nASK\nC  \nE  \n') 
+    }); 
+
+    default:
+    Test.describe("BasicTests1", function(){
+       Test.assertEquals(crossedwords('X','XX'), 'X\nX\n') 
+    }); 
+    break;
+  }
+}
+
+for(var i = 0; i < 20; i ++){
+  var x = Math.floor(Math.random() * 20) +1;
+  randRun(x);
+}
